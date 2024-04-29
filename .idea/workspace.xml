@@ -5,45 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c16c9f5b-2b6b-42d6-b7be-2b465ee7129d" name="Changes" comment="New">
-      <change afterPath="$PROJECT_DIR$/.idea/dip.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/equalizeHist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgSize.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/danghui_chengxing.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/danghui_gaosi.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/danghui_jiaoyan.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/danghui_yuantu.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/dayanta_chengxing.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/dayanta_gaosi.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/dayanta_jiaoyan.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/dayanta_yuantu.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/xust_chengxing.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/xust_gaosi.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/xust_jiaoyan.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/1z/xust_yuantu.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/beiwen2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/danghui_mohu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/danghui_mohu1.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/dayanta_mohu.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/dayanta_mohu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/guoqi_mohu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/guoqi_mohu1.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/2h/xiaojingbei.JPEG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/Girl_Elaine.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/HOUSE1.BMP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/LADY.BMP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/Lena.Bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/cameraman.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/cell_128.img" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/couplegray.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/fing_128.img" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/lena.img" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/pepper.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/watermarking64-64-2.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizeHist.py" beforeDir="false" afterPath="$PROJECT_DIR$/equalizeHist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgSize.py" beforeDir="false" afterPath="$PROJECT_DIR$/imgSize.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/equalizeHist.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2fi4GHLHaJZwrTer2nBiUlo3i51" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -71,21 +38,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.equalizeHist.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.equalizeHist.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Python\dip" />
@@ -138,6 +105,9 @@
       <option name="presentableId" value="Default" />
       <updated>1714270467016</updated>
       <workItem from="1714270468290" duration="700000" />
+      <workItem from="1714278536008" duration="10000" />
+      <workItem from="1714285100756" duration="257000" />
+      <workItem from="1714379980060" duration="2003000" />
     </task>
     <servers />
   </component>
@@ -149,7 +119,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="New" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dip$equalizeHist.coverage" NAME="equalizeHist Coverage Results" MODIFIED="1714270915827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dip$equalizeHist.coverage" NAME="equalizeHist Coverage Results" MODIFIED="1714381812200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dip$main.coverage" NAME="main Coverage Results" MODIFIED="1714270504137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

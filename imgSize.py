@@ -3,22 +3,24 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
+
 # 定义一个函数来计算图像的平均灰度值
 def average_grayscale(image_path):
-    image = Image.open(image_path).convert('L')# 打开图像并转换为灰度图
+    image = Image.open(image_path).convert('L')  # 打开图像并转换为灰度图
     width, height = image.size  # 获取图像宽度和高度
-    pixels = list(image.getdata()) # 获取图像数据的像素值列表
+    pixels = list(image.getdata())  # 获取图像数据的像素值列表
     average_value = sum(pixels) / len(pixels)
     return average_value
 
+
 # 定义一个函数来计算图像RGB通道的协方差矩阵
 def Cov(image_path):
-    image = cv2.imread(image_path)# 使用OpenCV读取图像
+    image = cv2.imread(image_path)  # 使用OpenCV读取图像
     w = image.shape[0]
-    h = image.shape[1]# 获取宽度和高度
+    h = image.shape[1]  # 获取宽度和高度
     b = [0] * w * h
     g = [0] * w * h
-    r = [0] * w * h# 将图像分解为B, G, R三个通道，并转置以分别获取单独的通道数组
+    r = [0] * w * h  # 将图像分解为B, G, R三个通道，并转置以分别获取单独的通道数组
 
     for i in range(w):  # 获得BGR三个波段的像素值
         for j in range(h):
@@ -90,6 +92,7 @@ def pixel_operation(image_path):
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+
 
 file_path = 'picture/pepper.tif'
 average_value = average_grayscale(file_path)
