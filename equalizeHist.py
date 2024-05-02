@@ -74,25 +74,27 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # 读取图片
-img = cv2.imread('picture/pepper.tif', cv2.IMREAD_GRAYSCALE)
-
+img = cv2.imread(r'picture/pepper.tif')
 # 灰度转换
-gray = img  # cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # 局部直方图均衡化处理
 clahe = cv2.createCLAHE(clipLimit=2, tileGridSize=(8, 8))
-
 # 将灰度图像和局部直方图相关联, 把直方图均衡化应用到灰度图
 result = clahe.apply(gray)
-
 # 显示图像
 fig = plt.figure(figsize=(10, 10))  # 设置大小
 plt.subplot(221)
-plt.imshow(gray, cmap=plt.cm.gray, vmin=0, vmax=255), plt.axis("off"), plt.title('(a)')
+plt.imshow(gray, cmap=plt.cm.gray, vmin=0, vmax=255),
+plt.axis("off")
+plt.title('(a)')
 plt.subplot(222)
-plt.imshow(result, cmap=plt.cm.gray, vmin=0, vmax=255), plt.axis("off"), plt.title('(b)')
+plt.imshow(result, cmap=plt.cm.gray, vmin=0, vmax=255)
+plt.axis("off")
+plt.title('(b)')
 plt.subplot(223)
-plt.hist(img.ravel(), 256), plt.title('(c)')
+plt.hist(img.ravel(), 256)
+plt.title('(c)')
 plt.subplot(224)
-plt.hist(result.ravel(), 256), plt.title('(d)')
+plt.hist(result.ravel(), 256)
+plt.title('(d)')
 plt.show()
