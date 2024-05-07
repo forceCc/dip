@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # 定义一个函数来计算图像的平均灰度值
 def average_grayscale(image_path):
-    image = Image.open(image_path).convert('L')  # 打开图像并转换为灰度图
+    image = Image.open(image_path).convert("L")  # 打开图像并转换为灰度图
     width, height = image.size  # 获取图像宽度和高度
     pixels = list(image.getdata())  # 获取图像数据的像素值列表
     average_value = sum(pixels) / len(pixels)
@@ -64,37 +64,54 @@ def Cov(image_path):
         cov_rg += (r[i] - mean_r) * (g[i] - mean_g)
         cov_rr += (r[i] - mean_r) * (r[i] - mean_r)
     m = w * h - 1
-    print('协方差矩阵:')
-    print(cov_bb / m, '\t', cov_bg / m, '\t', cov_br / m, '\n',
-          cov_gb / m, '\t', cov_gg / m, '\t', cov_gr / m, '\n',
-          cov_rb / m, '\t', cov_rg / m, '\t', cov_rr / m, '\n')
+    print("协方差矩阵:")
+    print(
+        cov_bb / m,
+        "\t",
+        cov_bg / m,
+        "\t",
+        cov_br / m,
+        "\n",
+        cov_gb / m,
+        "\t",
+        cov_gg / m,
+        "\t",
+        cov_gr / m,
+        "\n",
+        cov_rb / m,
+        "\t",
+        cov_rg / m,
+        "\t",
+        cov_rr / m,
+        "\n",
+    )
 
 
 def pixel_operation(image_path):
     img = cv2.imread(image_path, cv2.IMREAD_COLOR)
-    cv2.imshow('input', img)
+    cv2.imshow("input", img)
 
     # 注意：python中的print函数默认换行，可以用end=''或者接任意字符
     # 像素均值、方差
     means, dev = cv2.meanStdDev(img)
-    print('means: {}, \n dev: {}'.format(means, dev))
+    print("means: {}, \n dev: {}".format(means, dev))
     # 像素最大值和最小值
     min_pixel = np.min(img[:, :, 0])
     max_pixel = np.max(img[:, :, -1])
-    print('min: {}, max: {}'.format(min_pixel, max_pixel))
+    print("min: {}, max: {}".format(min_pixel, max_pixel))
 
     # 若是一个空白图像
     blank = np.zeros((300, 300, 3), dtype=np.uint8)
     # 像素均值、方差
     # blank[:, :] = (255, 0, 255)
     means, dev = cv2.meanStdDev(blank)
-    print('means: {}, \n dev: {}'.format(means, dev))
+    print("means: {}, \n dev: {}".format(means, dev))
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
 
-file_path = 'picture/pepper.tif'
+file_path = "picture/pepper.tif"
 average_value = average_grayscale(file_path)
 print(average_value)
 pixel_operation(file_path)
@@ -103,9 +120,9 @@ Cov(file_path)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-img = cv2.imread('picture/Lena.Bmp', 0)
+img = cv2.imread("picture/Lena.Bmp", 0)
 
-img1 = img.astype('float')
+img1 = img.astype("float")
 
 C_temp = np.zeros(img.shape)
 dst = np.zeros(img.shape)
@@ -135,30 +152,30 @@ img_dct_log = np.log(abs(img_dct))  # 进行log处理
 img_recor2 = cv2.idct(img_dct)  # 进行离散余弦反变换
 
 plt.subplot(231)
-plt.imshow(img1, 'gray')
-plt.title('original image')
+plt.imshow(img1, "gray")
+plt.title("original image")
 plt.xticks([]), plt.yticks([])
 
 plt.subplot(232)
 plt.imshow(dst1)
-plt.title('DCT1')
+plt.title("DCT1")
 plt.xticks([]), plt.yticks([])
 
 plt.subplot(233)
-plt.imshow(img_recor1, 'gray')
-plt.title('IDCT1')
+plt.imshow(img_recor1, "gray")
+plt.title("IDCT1")
 plt.xticks([]), plt.yticks([])
 
 plt.subplot(234)
-plt.imshow(img, 'gray')
-plt.title('original image')
+plt.imshow(img, "gray")
+plt.title("original image")
 
 plt.subplot(235)
 plt.imshow(img_dct_log)
-plt.title('DCT2(cv2_dct)')
+plt.title("DCT2(cv2_dct)")
 
 plt.subplot(236)
-plt.imshow(img_recor2, 'gray')
-plt.title('IDCT2(cv2_idct)')
+plt.imshow(img_recor2, "gray")
+plt.title("IDCT2(cv2_idct)")
 
 plt.show()
