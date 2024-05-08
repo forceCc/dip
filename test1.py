@@ -1,5 +1,6 @@
 import cv2
 from matplotlib import pyplot as plt
+import matplotlib
 
 img = cv2.imread("picture/pepper.tif")
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -19,3 +20,7 @@ plt.imshow(gray_img, cmap=plt.cm.gray)
 plt.axis("off")
 plt.title("gray")
 plt.show()
+
+a = sorted([f.name for f in matplotlib.font_manager.fontManager.ttflist])
+for i in a:
+    print(i)
