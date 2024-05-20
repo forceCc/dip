@@ -92,7 +92,7 @@ cv2.IMREAD_GRAYSCALE:以灰度模式读取一张图片，实际取值为0
 cv2.IMREAD_UNCHANGED:加载一副彩色图像，透明度不会被忽略。
 """
 plt.rcParams["figure.figsize"] = (15, 15)
-image = cv2.imread(r"picture\LADY.BMP", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread(r"picture\Lena.Bmp", cv2.IMREAD_GRAYSCALE)
 plt.subplot(231)
 plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.axis("off")
