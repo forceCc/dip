@@ -91,7 +91,7 @@ cv2.IMREAD_COLOR:读取一副彩色图片，图片的透明度会被忽略，默
 cv2.IMREAD_GRAYSCALE:以灰度模式读取一张图片，实际取值为0
 cv2.IMREAD_UNCHANGED:加载一副彩色图像，透明度不会被忽略。
 """
-plt.rcParams["figure.figsize"] = (15, 15)
+plt.rcParams["figure.figsize"] = (10, 5)
 image = cv2.imread(r"picture\Lena.Bmp", cv2.IMREAD_GRAYSCALE)
 plt.subplot(231)
 plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
@@ -120,7 +120,7 @@ plt.title("Laplace")
 plt.show()
 
 
-plt.rcParams["figure.figsize"] = (15, 15)
+plt.rcParams["figure.figsize"] = (10, 5)
 prewitt_img_eq = cv2.equalizeHist(prewitt_img)
 plt.subplot(221)
 plt.imshow(cv2.cvtColor(prewitt_img_eq, cv2.COLOR_BGR2RGB))
