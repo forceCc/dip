@@ -5,17 +5,14 @@ from matplotlib import pyplot as plt
 
 
 def getDegradedImg(image, Huv):  # 根据退化模型生成退化图像
-    # (1) 傅里叶变换, 中心化
     F = fft.fft2(image.astype(np.float32))  # 傅里叶变换
     fftShift = fft.fftshift(F)  # 将低频分量移动到频域图像中心
-    # (2) 在频率域修改傅里叶变换: 傅里叶变换 点乘 滤波器传递函数
     fftShiftFilter = fftShift * Huv  # Guv = Fuv * Huv
-    # (3) 对修正傅里叶变换 进行傅里叶逆变换，逆中心化
     invShift = fft.ifftshift(fftShiftFilter)  # 将低频分量逆转换回图像四角
     imgIfft = fft.ifft2(invShift)  # 逆傅里叶变换，返回值是复数数组
     imgDegraded = np.uint8(
         cv2.normalize(np.abs(imgIfft), None, 0, 255, cv2.NORM_MINMAX)
-    )  # 归一化为 [0,255]
+    )
     return imgDegraded
 
 
@@ -90,32 +87,18 @@ wiener_img1 = wienerFilter(gaussian_img, HBlur, 1e-6)
 
 plt.rcParams["font.sans-serif"] = ["SimHei"]
 plt.rcParams["figure.figsize"] = (15, 15)
-plt.subplot(241)
-plt.imshow(img, "gray")
-plt.title("原图像")
+plt.subplot(241), plt.imshow(img, "gray"), plt.title("原图像")
 plt.axis("off")
-plt.subplot(242)
-plt.imshow(imgBlur, "gray")
-plt.title("退化图像")
+plt.subplot(242), plt.imshow(imgBlur, "gray"), plt.title("退化图像")
 plt.axis("off")
-plt.subplot(243)
-plt.imshow(gaussian_img, "gray")
-plt.title("高斯噪声图像")
+plt.subplot(243), plt.imshow(gaussian_img, "gray"), plt.title("高斯噪声图像")
 plt.axis("off")
-plt.subplot(244)
-plt.imshow(inverse_img, "gray")
-plt.title("逆滤波图像")
+plt.subplot(244), plt.imshow(inverse_img, "gray"), plt.title("逆滤波图像")
 plt.axis("off")
-plt.subplot(245)
-plt.imshow(wiener_img, "gray")
-plt.title("维纳滤波图像")
+plt.subplot(245), plt.imshow(wiener_img, "gray"), plt.title("维纳滤波图像")
 plt.axis("off")
-plt.subplot(246)
-plt.imshow(inverse_img1, "gray")
-plt.title("逆滤波图像(含噪)")
+plt.subplot(246), plt.imshow(inverse_img1, "gray"), plt.title("逆滤波图像(含噪)")
 plt.axis("off")
-plt.subplot(247)
-plt.imshow(wiener_img1, "gray")
-plt.title("维纳滤波图像(含噪)")
+plt.subplot(247), plt.imshow(wiener_img1, "gray"), plt.title("维纳滤波图像(含噪)")
 plt.axis("off")
 plt.show()
